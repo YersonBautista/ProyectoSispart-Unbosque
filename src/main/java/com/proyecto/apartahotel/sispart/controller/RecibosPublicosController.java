@@ -128,7 +128,9 @@ public class RecibosPublicosController {
 
 		try {
 
-			RecibosPublicos reciboPublico = new RecibosPublicos();
+			RecibosPublicos reciboPublico = new RecibosPublicos(recibosPublicosDTO.getTipRecibo(),recibosPublicosDTO.getNumReferencia(),
+					recibosPublicosDTO.getPagoOportuno(),recibosPublicosDTO.getSupension(),recibosPublicosDTO.getTotalPagar()
+					);
 
 			reciboPublicoService.save(reciboPublico);
 

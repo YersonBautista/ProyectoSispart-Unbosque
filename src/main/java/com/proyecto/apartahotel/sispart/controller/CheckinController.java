@@ -127,7 +127,6 @@ public class CheckinController {
 
 		Huesped huesped = null;
 		Habitacion habitacion = habitacionService.findByCodHabitacion(checkinDTO.getCodHabitacion().getCodHabitacion());
-		;
 		Map<String, Object> response = new HashMap<>();
 
 		if (!huespedService.existsByTipoDocumentoAndNumDocumento(tipDocumento, numDocumento)) {

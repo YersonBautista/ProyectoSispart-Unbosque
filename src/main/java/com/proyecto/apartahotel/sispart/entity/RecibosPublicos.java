@@ -22,9 +22,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name = "recibo_publico")
 public class RecibosPublicos implements Serializable {
 
-
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cod_recibo")
@@ -60,7 +57,7 @@ public class RecibosPublicos implements Serializable {
 	}
 
 	public RecibosPublicos(Long codRecibo, TipoRecibo tipRecibo, String numReferencia, Date pagoOportuno,
-			Date supension, Double totalPagar, String docRecibo) {
+			Date supension, Double totalPagar) {
 
 		this.codRecibo = codRecibo;
 		this.tipRecibo = tipRecibo;
@@ -68,18 +65,17 @@ public class RecibosPublicos implements Serializable {
 		this.pagoOportuno = pagoOportuno;
 		this.supension = supension;
 		this.totalPagar = totalPagar;
-		this.docRecibo = docRecibo;
 	}
 
 	public RecibosPublicos(TipoRecibo tipRecibo, String numReferencia, Date pagoOportuno, Date supension,
-			Double totalPagar, String docRecibo) {
-		
+			Double totalPagar) {
+
 		this.tipRecibo = tipRecibo;
 		this.numReferencia = numReferencia;
 		this.pagoOportuno = pagoOportuno;
 		this.supension = supension;
 		this.totalPagar = totalPagar;
-		this.docRecibo = docRecibo;
+
 	}
 
 	public Long getCodRecibo() {
